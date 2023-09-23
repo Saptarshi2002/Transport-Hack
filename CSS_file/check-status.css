@@ -14,7 +14,7 @@ body{
     top: 0px;
     left: 0px;
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 31px;
     z-index: 1000;
 }
@@ -22,7 +22,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 52em;
+    width: 85%;
     height: 130px;
     border: none;
     background-color: white;
@@ -98,6 +98,7 @@ body{
     padding-left:12px;
     font-weight: 500;
     font-size: 130%;
+    /* margin-bottom: 1%; */
 }
 .stopage-name{
     display: flex;

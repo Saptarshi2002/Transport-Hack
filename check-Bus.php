@@ -105,7 +105,7 @@ if($result)
              if($fsource == true && $fdestination == true){
                      echo '
                       <div class="bus-details">
-                          <a href="check-status.html?bname='.$bname.'&source='.$source.'&destination='.$destination.'"><button class="button-div">
+                          <a href="check-status.php?bname='.$bname.'&source='.$source.'&destination='.$destination.'"><button class="button-div">
                               <div>
                                    <div class="name-source">
                                       <span class="bus-name">'. $bname .'</span> 
