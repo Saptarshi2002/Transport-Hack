@@ -1,3 +1,28 @@
+<?php
+  if($_SERVER['REQUEST_METHOD']=="GET")
+  {
+    if(isset($_GET['check-input']))
+    {
+      if (isset($_GET['check-input'])) {
+        $source = $_GET['source'];
+        $destination = $_GET['destination'];
+
+        // Encode the source and destination parameters
+        $encodedSource = urlencode($source);
+        $encodedDestination = urlencode($destination);
+
+        // Construct the URL with encoded parameters
+        $redirectUrl = "/Transport-Hack/check-Bus.php?source={$encodedSource}&destination={$encodedDestination}";
+
+        // Perform the redirection
+        header("Location: " . $redirectUrl);
+        exit; // Make sure to exit after redirection
+    }
+  }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -83,7 +108,7 @@
           </div>
         </div>
         <div style="width: 88%">
-          <form action="check-status.html">
+          <form action="index.php" method="POST">
             <div>
               <img
                 src="jpg_files/bus-png-icon-17.jpg"
@@ -137,7 +162,7 @@
           </div>
         </div>
         <div style="width: 88%">
-          <form action="check-Bus.html">
+          <form action="index.php" method="GET">
             <div>
               <img
                 src="png_files/source.png"
@@ -153,6 +178,7 @@
                 type="text"
                 class="form__input"
                 id="source"
+                name="source"
                 required
                 placeholder="Enter Source"
               />
@@ -183,12 +209,13 @@
                 type="text"
                 class="form__input"
                 id="destination"
+                name="destination"
                 placeholder="Enter destination"
                 required
               />
             </div>
             <div>
-              <button class="check-input">Check Buses</button>
+              <button class="check-input" name="check-input">Check Buses</button>
             </div>
           </form>
         </div>
