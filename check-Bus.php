@@ -105,11 +105,11 @@ if($result)
              if($fsource == true && $fdestination == true){
                      echo '
                       <div class="bus-details">
-                          <a href="check-status.html"><button class="button-div">
+                          <a href="check-status.html?bname='.$bname.'&source='.$source.'&destination='.$destination.'"><button class="button-div">
                               <div>
                                    <div class="name-source">
                                       <span class="bus-name">'. $bname .'</span> 
-                                      <span class="frequency">Frequency : '. $bfrquency.'<!--high/            average--></span>
+                                      <span class="frequency">Frequency : '. $bfrquency .'<!--high/            average--></span>
                                     </div>  
                                </div>
                               <div class="source-destination">
